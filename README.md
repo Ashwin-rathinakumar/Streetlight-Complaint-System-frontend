@@ -1,35 +1,121 @@
-[# 💡 Lumina Streetlight Fault Reporting System — React Frontend
+# 💡 Streetlight Fault Reporting System - Frontend
 
-A stunning, responsive, and fully integrated React Single Page Application (SPA) built using Vite, Tailwind CSS, Axios, and React Router. This project represents the frontend interface of the municipal civic safety program, connecting directly to the running FastAPI backend.
+A React + Vite frontend for the Streetlight Fault Reporting System.
+
+The application allows citizens to report faulty streetlights and administrators to monitor and manage complaints.
 
 ---
 
-## 🚀 Quick Start Guide
+## 🚀 Features
 
-### 1. Install Dependencies
-Open your command prompt or terminal in the `streetlight_frontend` directory and run:
+- Responsive UI
+- Register streetlight complaints
+- View all complaints
+- Update complaint status
+- Delete complaints
+- Connected to FastAPI backend
+- Axios API integration
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- Axios
+- CSS
+
+---
+
+## 📂 Project Structure
+
+```
+streetlight_frontend/
+│── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│── public/
+│── package.json
+│── vite.config.js
+│── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone repository
+
+```bash
+git clone https://github.com/<your-username>/streetlight_frontend.git
+```
+
+Go inside
+
+```bash
+cd streetlight_frontend
+```
+
+Install packages
+
 ```bash
 npm install
 ```
 
-### 2. Launch Development Server
+---
+
+## 🔧 Environment Variables
+
+Create a `.env` file
+
+```env
+VITE_API_BASE_URL=https://your-render-backend.onrender.com
+```
+
+---
+
+## ▶️ Run Development Server
+
 ```bash
 npm run dev
 ```
-The terminal will print:
-`  ➜  Local:   http://localhost:5173/`
 
-Open `http://localhost:5173/` in your browser to experience the system!
+Runs at
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🌐 Backend Connection
+
+The frontend communicates with the FastAPI backend using Axios.
+
+Example
+
+```javascript
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+```
 
 ---
 
-## 🎨 UI/UX Features Built
+## 📷 Features
 
-1. **Aesthetic Twilight Palette**: Premium dark-mode styling utilizing glassmorphism blur layers (`glass-panel`), harmonious glowing active status bulbs (`glow-bulb`), and vibrant neon indicator borders.
-2. **Dual-View Complaint Listings**: Users can toggle effortlessly between a clean grid card layout (optimized for mobile/scannability) and a dense administrative spreadsheet table (optimized for bulk analysis).
-3. **Smart Seeder Hook**: If the database has no poles registered, a quick-seed button appears in the complaint submission form to instantly register mock assets in one click, making demonstrations completely fail-safe.
-4. **Interactive Dashboard**: Admins can dispatch technicians by modifying dropdown states (`Submitted` -> `Assigned` -> `In Progress` -> `Resolved`), and delete reports.
+- Submit Complaint
+- View Complaints
+- Admin Dashboard
+- Complaint Status Updates
+- Delete Complaint
 
 ---
-> - When an administrator resolves all complaints against a specific pole (updating status to **"Resolved"**), the backend dynamically verifies if any unresolved complaints remain. If none exist, it automatically reverts the pole's status back to **"Functional"**, which is immediately reflected in the frontend tables upon reload!
-](http://localhost:5174/)
+
+## 🚀 Deployment
+
+Recommended platform: **Vercel**
+
+Backend: Render
+
+Database: Supabase PostgreSQL
