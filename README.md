@@ -113,9 +113,9 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 ---
 
 ## 🚀 Deployment
-
-Recommended platform: **Vercel**
-
 Backend: Render
 
 Database: Supabase PostgreSQL
+
+URL:http://localhost:5174(after completion of both frontend and backend)
+
