@@ -117,5 +117,5 @@ Backend: Render
 
 Database: Supabase PostgreSQL
 
-URL:http://localhost:5174(after completion of both frontend and backend)
+URL:http://localhost:5174 (after completion of both frontend and backend)
 
