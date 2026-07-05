@@ -1,23 +1,12 @@
-import axios from 'axios';
+import axios from "axios";
 
-// Base URL for the FastAPI backend service
-const getBaseUrl = () => {
-  if (import.meta.env && import.meta.env.VITE_API_BASE_URL) {
-    return import.meta.env.VITE_API_BASE_URL;
-  }
-  if (typeof window !== 'undefined' && window.location) {
-    return `http://${window.location.hostname}:8000`;
-  }
-  return 'http://127.0.0.1:8000';
-};
-
-const API_BASE_URL = getBaseUrl();
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const apiClient = axios.create({
-  baseURL: API_BASE_URL,
-  headers: {
-    'Content-Type': 'application/json',
-  },
+    baseURL: API_BASE_URL,
+    headers: {
+        "Content-Type": "application/json",
+    },
 });
 
 export const api = {
